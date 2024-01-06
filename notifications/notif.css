@@ -1,0 +1,59 @@
+.message-box{
+    position: fixed;
+    z-index: 999999999;
+    top: 12px;
+    right: 12px;
+}
+.message-content{
+    position: relative;
+    width: 300px;
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 0 12px #999;
+    color: #fff;
+    opacity: 0.9;
+    background: rgb(128, 166, 236);
+}
+.message-header{
+    font-size: 16px;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+
+}
+.message-text{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+}
+.message-busket{
+    background-color: rgb(175, 180, 175);
+    border:1px solid #162416;
+    color: #071807;
+}
+
+.message-madeorder{
+    background-color: rgb(176, 199, 176);
+    border:1px solid #162416;
+    color: #071807;
+}
+
+.message-notrister{
+    background-color: #b4cab7cc;
+    border:1px solid #162416;
+    color: #000000;
+}
+
+.message-error{
+    background-color: #bd362f;
+}
+.message-time-line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: #000;
+    opacity: 0.4;
+ 
+}

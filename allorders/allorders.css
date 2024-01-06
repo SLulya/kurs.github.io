@@ -1,0 +1,46 @@
+body{
+    font-family: 'Philosopher', sans-serif;
+}
+.red{
+    color: rgb(163, 50, 50);
+}
+.brown{
+    color: rgb(41, 12, 6);
+}
+
+.blue{
+    color: rgb(24, 74, 131);
+}
+.green{
+    color: rgb(24, 66, 24);
+}
+.yellow{
+    color: rgb(202, 140, 23);
+}
+.show{
+    display: block;
+    background: rgba(0, 0, 0, 0.397);
+}
+th, td {
+    border: 1px solid black;
+    width: 100vw;
+    height: 50px;
+ }
+table{
+    margin-top: 20px;
+}
+.circlediv{
+    margin-left: 10px;
+}
+.line{
+    border: 1px solid rgb(1, 47, 1);
+    margin-top: 15px;
+    width:60%;
+    margin-left: 20%;
+    margin-bottom: 25px;
+    
+}
+.twobut{
+    margin-left: 10px;
+    margin-top: 10px;
+}

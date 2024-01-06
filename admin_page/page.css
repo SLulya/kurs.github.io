@@ -1,0 +1,44 @@
+body{
+    font-family: 'Philosopher', sans-serif;
+}
+.red{
+    color: red;
+}
+.lime{
+    color: lime;
+}
+.orange{
+    color: orange;
+}
+.show{
+    display: block;
+    background: rgba(0, 0, 0, 0.397);
+}
+.img{
+    max-width: 400px;
+    overflow: hidden;
+}
+td{
+    height: 150px;
+}
+th, td {
+    border: 1px solid black;
+ }
+.toptext{
+    margin-top: 15px;
+}
+.twobut{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.line{
+    border: 1px solid rgb(1, 47, 1);
+    margin-top: 15px;
+    width:60%;
+    margin-left: 20%;
+    margin-bottom: 25px;
+    
+}
+.table{
+    margin-top: 10px;
+}

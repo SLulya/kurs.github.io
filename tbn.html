@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="tbn.css">
+    <link rel="stylesheet" href="notifications/notif.css">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/da3468c831.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+    
+        <div class="fix">
+    <header>
+        <a @click="return_allproducts()"><img src="9bdd365043b3eedd45ed1f8edd7c65b0-removebg-preview.png" alt="no picture" class="logo"></a>
+        <h1>The Book Nook</h1>
+        
+        <a v-on:click="signOut()"><img src="logout.png" alt="notfound" class="logout" ></a>
+    
+    </header>
+
+   <div class="menu">
+
+    <div class="dropdown">
+        <button class="dropbtn btn btn-outline-success" ><i class="fa-solid fa-bars" style="color: #031a03;"></i> Каталог товарів</button>
+        <div class="dropdown-content" id="select">
+          <a @click="tovar_filter('Детективи')">Детективи</a>
+          <a @click="tovar_filter('Класика')">Класика</a>
+          <a @click="tovar_filter('Романи')">Любовні романи</a>
+          <a @click="tovar_filter('Жахи')">Жахи, трилери</a>
+          <a @click="tovar_filter('Фантастика')">Фантастика</a>
+          <a @click="tovar_filter('Фентезі')">Фентезі</a>
+          <a @click="tovar_filter('Пригоди')">Пригоди</a>
+          <a @click="tovar_filter('Поезія')">Поезія</a>
+          <a @click="tovar_filter('Історичніром')">Історичні романи</a>
+        </div>
+      </div>
+
+    <div class="search-box">
+        <div class="row">
+            <input type="text" id="inputbox" v-model="inputValue" placeholder="&#xf002; search anything" @keyup="a1()">
+      
+        </div>
+        <div class="result-box">
+            
+        </div>
+    </div>
+
+    
+        <a href="busket/busket.html" class="busket btn btn-outline-success"><i class="fa-solid fa-cart-shopping" style="color: #031a03;"></i> Кошик</a>
+    
+
+
+   
+        <button class="prof btn btn-outline-success" @click="choosewheretogo()"><i class="fa-solid fa-user"></i></button>
+    
+</div>
+</div>
+<div class="bodypart">
+   
+    <div class="filter" id="filter">
+      <h3 align="center">Сортувати ціною</h3><br>
+      <input type="number" name="від" id="minprice" placeholder="від">
+      <input type="number" name="до" id="maxprice" placeholder="до"><br>
+
+        <div class="sortfrom"><div><input @click="frommintomax()" id="sortfrom" type="radio" name="radio"></div><div class="label">Сортувати за зростанням ціни</div></div>
+
+      <div class="sortfrom"><div><input @click="frommaxtomin()" id="sortfrom" type="radio" name="radio"></div><div class="label">Сортувати за спаданням ціни</div></div>
+
+      <button class="btn btn-success apply" @click="filter()">Застосувати</button>
+      <button class="btn btn-success cancel" @click="return_allproducts()">Скинути фільтр</button>
+    </div>
+
+    <div class="all_books">
+    <product-component v-for="book in books" :key="book.id" :book="book"></product-component>
+   </div>
+<div id="modal"> 
+  <div class="buynow" id="buynow">
+   <h2 align="center">Ваше замовлення</h2>
+       <div class="alltovstobuy" id="alltovstobuy">
+           
+           
+       </div>
+       <div class="choosetype"><h4>Виберіть тип доставки:</h4></div>
+       <div class="typeofdelivery">
+       <div class="novaposhta">
+           <div><input type="radio" id="np" name="delivery" @click="novaposhta()">Нова Пошта</div>
+           <div class="plusten">+ 10%</div>
+       </div>
+
+       <div class="ukrposhta">
+           <div><input type="radio" id="up" name="delivery" @click="ukrposhta()">УкрПошта</div>
+           <div class="plusten">+ 5%</div>
+       </div>
+
+       <div class="kurer">
+           <div><input type="radio" id="kur" name="delivery" @click="kurer()">Кур'єр</div>
+           <div class="plusfis">+ 15%</div>
+       </div>
+
+       <div class="sam">
+           <div><input type="radio" id="kur" name="delivery" @click="sam()">Самовивіз</div>
+           <div class="pluszero">+ 0%</div>
+       </div>
+       </div>
+       <div class="onthebuttom">
+           <div class="totalprice" id="totalprice"></div>
+           <div><button class="confirm btn btn-success" @click=" saveorder()"><i class="fa-solid fa-check" style="color: #ffffff;"></i></button>
+           <button class="cancelbuy btn btn-danger" @click="cancel()"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></button></div>
+       </div>
+   </div>
+   </div>
+
+</div>
+
+
+
+
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.min.js"></script>
+    <script src="fb.js"></script>
+ <script src="notifications/notif.js"></script>
+ <script src="notifications/notif2.js"></script>
+    <script src="tbn.js"></script>
+    
+</body>
+</html>

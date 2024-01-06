@@ -1,0 +1,13 @@
+<div class="allprod">
+    
+    <div class="prod"><span @click="$root.relocationID(book.id)">
+        <div class="imag"><img v-bind:src="book.img" alt='пномбмпбромрб'></div>
+        <div class="name">{{book.name}}</div>
+        <div class="author">{{book.author}}</div>
+        <div class="price">{{book.price}}₴</div>
+        <div class="reviews">Відгуки:{{book.reviews}}</div></span>
+        <div class="add btn btn-success"  @click="$root.checking(book.id)"><i class="fa-solid fa-cart-shopping" style="color: #f1f4f8;"></i></div>
+        <div class="buy btn btn-outline-success" @click="$root.checkingtobuy(book.id)">Придбати</div>
+    </div>
+</div>
+<!--:id="book.id"-->

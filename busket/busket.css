@@ -1,0 +1,340 @@
+
+.bucket{
+    height:fit-content;
+    margin-bottom: 88px;
+}
+.h1{
+    font-size: 45px;
+    font-family: 'Comfortaa', sans-serif;
+    margin-top: 20px;
+}
+.line{
+    border: 1px solid rgb(1, 47, 1);
+    margin-top: 15px;
+    width:60%;
+    margin-left: 20%;
+    margin-bottom: 25px;
+    
+}
+.emptybusket{
+    font-size: 60px;
+    color: #023002cb;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Philosopher', sans-serif;
+}
+.tovar{
+    border: 2px solid rgb(2, 61, 34);
+    width: 99%;
+    height: 175px;
+    margin: 5px 0.5%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f3ef;
+    
+}
+.kartunka img {
+    height:150px;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/*names*/
+.nameofbook{
+    height: 40px;
+    padding: 2px 15px;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    width: 350px;
+}
+.nameofauthor{
+    margin-top: 10px;
+    height: 40px;
+    width: 200px;
+    opacity: 95%;
+    font-size: 20px;
+    padding: 2px 15px;
+}
+.names{
+     margin-left: 20px;
+     margin-top: 25px;
+}
+/*price*/
+.pricediv{
+     margin-top: 25px;    
+    height: 40px; 
+     font-size: 22px; 
+     color: rgb(1, 54, 1);   
+     font-weight: 700; 
+}
+.tovprice{
+    font-size: 15px; 
+     color: rgb(3, 22, 3); 
+     font-weight: 500;
+}
+.alldivprice{
+    width: 150px;
+     margin-left: 15px;
+
+}
+/**/
+.twodiv{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 40px;
+    height: 100px;
+    margin-top: 57px;
+    justify-content: space-between;
+    width: 330px;
+}
+/*amount*/
+.amount{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    margin-top: 5px;
+}
+.amountreg{
+    height: 40px;
+    width: 60px;
+    background-color: rgba(1, 39, 1, 0.712);
+    border-radius:4px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+.minusam{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -55%);
+  font-size: 42px;
+}
+.plusam{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-54%, -57%);
+    font-size: 40px;
+}
+.amountp{
+    width: 70px;
+    height: 40px;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+}
+.amountp p{
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5px;
+    font-family: 'Comfortaa', sans-serif;
+}
+/*checkbox*/
+.custom-checkbox .checkmark{
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(1, 36, 1);
+    cursor:pointer;
+    display: inline-block;
+    border-radius: 6px; 
+    background: rgb(2, 54, 2) url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png) center/1250% no-repeat;
+  transition: background-size 0.3s ease;
+}
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-size: 50%;
+    transition: background-size 0.3s cubic-bezier(0.5, 0, 0.8, 1.24);
+  }  
+.custom-checkbox input[type="checkbox"]{
+    display: none;
+}
+
+/*fixed div*/
+.buytov{
+    border-top: 2px solid rgb(34, 34, 34);
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(196, 202, 196, 0.952);
+    height: 85px;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 999999;
+  color: rgb(3, 24, 3);
+}
+.ofzam{
+    height: 45px;
+    width: 180px;
+    margin-left: 20px;
+}
+.text{
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.zamovlenya{
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin-right: 10px;
+}
+.house{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: rgb(3, 24, 3);
+    margin-left: 5px;
+}
+.buytov a{
+    text-decoration: none;
+}
+.houseicon{
+    font-size: 24px;
+    height: 40px;
+    margin-top: 20px;
+}
+.housetext{
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 25px;
+    height: 40px;
+    font-weight: 500;
+}
+/*hidden div*/
+.buynow{
+    border: 2px solid rgb(12, 95, 4);
+    z-index: 9999;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 550px;
+    background-color: #fcf9f6;
+    padding-top: 5px;
+    font-family: 'Philosopher', sans-serif;
+ 
+    flex-direction: column;
+    position: fixed;
+}
+.alltovstobuy{
+    border: 2px solid rgb(3, 27, 1);
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.alltovstobuy::-webkit-scrollbar {
+    width: 13px;
+    
+  }
+   
+  .alltovstobuy::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  .alltovstobuy::-webkit-scrollbar-thumb {
+    background-color: rgba(1, 20, 1, 0.651);
+    outline: none;
+    border-radius: 10px;
+  }
+.tovtobuy{
+    border: 0.5px solid rgb(1, 31, 10);
+    border-top: none;
+    border-left: none;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.imgoftov{
+    height: 65px;
+    width: 40px;
+    margin-left: 15px;
+}
+.nameoftov{
+    margin-top: 5px;
+    width: fit-content;
+    height: 30px;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.priceoftov{
+    margin-top: 15px;
+    height: fit-content;
+    width: 70px;
+    font-size: 23px;
+}
+.choosetype{
+    margin-left: 10px;
+}
+.novaposhta, .ukrposhta, .kurer, .sam{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.typeofdelivery{
+    width: 530px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+input[type="radio"]{
+    margin-right: 5px;
+    accent-color: #023002;
+}
+.onthebuttom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 530px;
+    margin-left: 7px;
+    margin-top: 20px;
+    height: 70px;
+    padding-right: 10px;
+}
+.totalprice{
+    font-size: 33px;
+    height: fit-content;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.confirm, .cancelbuy{
+    height: 38px;
+    width: 70px;
+margin-top: 15px;
+
+}
+.confirm{
+    margin-right: 10px;
+}
+#modal{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(1, 29, 1, 0.534);
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+}
+.tovtobuyleft{
+    display: flex;
+    flex-wrap: wrap;
+}

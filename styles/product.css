@@ -1,0 +1,62 @@
+.prod{
+    border: 0.25px solid rgba(31, 63, 2, 0.137);
+    width: 200px;
+    height: 410px;
+    padding: 5px;
+    font-family:'Raleway', sans-serif; 
+    padding-top: 10px;
+    background-color: #f7f1ed;
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+img{
+    width: 120px;
+    height: 180px;
+    margin-left: 30px;
+}
+.author{
+    color: rgb(65, 73, 54);
+}
+.name{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+    height: 70px;
+    
+}
+.price{
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.reviews{
+    margin-left: 55px;
+    margin-top: 5px;
+    color: rgb(65, 73, 54);
+}
+.prod .add, .buy{
+    display: inline-block;
+    margin-top: 10px;
+    
+}
+.add{
+    margin-right: 30px;
+    margin-left: 5px;
+}
+a{
+    text-decoration: none;
+}
+.allprod{
+    
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.prod:hover{
+    -webkit-box-shadow: 0px 1px 8px 1px rgba(3,15,2,0.63);
+-moz-box-shadow: 0px 1px 8px 1px rgba(3,15,2,0.63);
+box-shadow: 0px 1px 8px 1px rgba(3,15,2,0.63);
+}

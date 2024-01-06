@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="tbn.css">
+    <link rel="stylesheet" href="profile.css">
+
+    <script src="https://kit.fontawesome.com/da3468c831.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+    
+        <div class="fix">
+    <header>
+        <a href="tbn.html"><img src="9bdd365043b3eedd45ed1f8edd7c65b0-removebg-preview.png" alt="no picture" class="logo"></a>
+        <h1>The Book Nook</h1>
+        
+        <a onclick="signOut()"><img src="logout.png" alt="notfound" class="logout" ></a>
+    
+    </header>
+
+   </div>
+   <div class="user_info">
+    <div class="divava">
+        <div class="user_avatar" id="user_avatar">
+<img src="" alt="" id="foto_fb" class="userfoto">
+        </div>
+        
+
+        
+
+
+        <input type="file"  class="fileInput avabutton" id="fileInput" style="display: none;">
+        <button class="avabutton" onclick="document.getElementById('fileInput').click()">Вибрати фото</button>
+    <button id="uploadButton" class="avabutton av"><i class="fa-solid fa-file-arrow-down"></i></button>
+
+        <button class="avabutton av" id="totalsave"><i class="fa-regular fa-floppy-disk"></i></button>
+    </div>
+       <div class="text">
+        <p align="center">Мій профіль</p>
+       </div>
+        <div class="user_info_inputs">
+            
+            <label for="">Ім'я</label><br>
+            <input type="text" readonly id="name" title="Для вашого імені"><button class="btn btn-outline-dark edit" onclick="edit('name','name1')"><i class="fa-regular fa-pen-to-square"></i></button><span id="name1"></span><br><br>
+            
+            <label for="">Прізвище</label><br>
+            <input type="text" readonly id="lastname"><button class="btn btn-outline-dark edit" onclick="edit('lastname','lastname1')"><i class="fa-regular fa-pen-to-square"></i></button><span id="lastname1"></span><br><br>
+            
+            <label for="">Пошта</label><br>
+            <input type="text" readonly id="email"><button class="btn btn-outline-dark edit" onclick="edit('email','email1')"><i class="fa-regular fa-pen-to-square"></i></button><span id="email1"></span><br><br>
+            
+            <label for="">Пароль</label><br><input type="text" readonly id="password"><button class="btn btn-outline-dark edit" onclick="edit('password','password1')"><i class="fa-regular fa-pen-to-square"></i></button><span id="password1"></span><br><br>
+        </div>
+   </div>
+   </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="fb.js"></script>
+
+    <script src="tbn.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+.bodyy{
+    border: 2px solid rgb(6, 34, 6);
+    width: 88%;
+    margin-left: 6%;
+    height: fit-content;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    background-color: #f1ebe8e3;
+}
+img{
+    height: 400px;
+    width: 250px;
+    margin-left: 50px;
+}
+
+.blockone{
+    margin-left: 70px;
+}
+.nameofbook{
+    height: 50px;
+    width: fit-content;
+    margin-top: 5px;
+}
+.nameofbook h1{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+}
+.authorofbook{
+    height: 40px;
+    width: fit-content;
+    margin-top: 20px;
+    margin-left: 5px;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400px;
+}
+.anottext{
+    border-bottom: 1px solid rgb(12, 24, 1);
+    margin-top: 70px;
+    height: 45px;
+    width: fit-content;
+    
+}
+.anottext h3{
+    font-size: 30px;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 550;
+}
+.anotation{
+    margin-top: 25px;
+    margin-left: 10px;
+    height: 300px;
+    width: 630px;
+    padding: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+background-color: none;
+}
+.anotation::-webkit-scrollbar {
+    width: 13px;
+    
+  }
+   
+  .anotation::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  .anotation::-webkit-scrollbar-thumb {
+    background-color: rgba(1, 20, 1, 0.651);
+    outline: none;
+    border-radius: 10px;
+  }
+.anotation p{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 18px;
+}
+.blocktwo{
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.priceofbook{
+    width: 200px;
+    height: 50px;
+    border: 1px dashed rgb(11, 56, 2);
+}
+.priceofbook h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    padding-left: 60px;
+    
+}
+.addtobuket{
+    height: 50px;
+    width: 85px;
+    margin-top: 30px;
+    background-color: rgb(1, 51, 1);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.addtobuket:hover{
+    background-color: rgb(14, 68, 14);
+}
+.buythebook{
+    height: 50px;
+    width: 85px;
+    margin-top: 30px;
+    margin-left: 35px;
+    background-color: rgb(27, 73, 27);
+    
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+.buythebook:hover{
+    background-color: rgb(1, 51, 1);
+}
+.addto{
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-solid{
+ position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+    font-size: 19px;
+}
+
+/*hidden div*/
+.buynow{
+    border: 2px solid rgb(12, 95, 4);
+    z-index: 9999;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 450px;
+    background-color: #fcf9f6;
+    padding-top: 5px;
+    font-family: 'Philosopher', sans-serif;
+ 
+    flex-direction: column;
+    position: fixed;
+}
+.alltovstobuy{
+    border: 2px solid rgb(3, 27, 1);
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    width: 500px;
+    height: fit-content;
+}
+
+.tovtobuy{
+    border: 0.5px solid rgb(1, 31, 10);
+    border-top: none;
+    border-left: none;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.imgoftov{
+    height: 65px;
+    width: 40px;
+    margin-left: 15px;
+}
+.nameoftov{
+    margin-top: 5px;
+    width: fit-content;
+    height: 30px;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.priceoftov{
+    margin-top: 15px;
+    height: fit-content;
+    width: 70px;
+    font-size: 23px;
+}
+.choosetype{
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.novaposhta, .ukrposhta, .kurer, .sam{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.typeofdelivery{
+    width: 530px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+input[type="radio"]{
+    margin-right: 5px;
+    accent-color: #023002;
+}
+.onthebuttom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 530px;
+    margin-left: 7px;
+    margin-top: 20px;
+    height: 70px;
+    padding-right: 10px;
+}
+.totalprice{
+    font-size: 33px;
+    height: fit-content;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.confirm, .cancelbuy{
+    height: 38px;
+    width: 70px;
+margin-top: 15px;
+
+}
+.confirm{
+    margin-right: 10px;
+}
+#modal{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(1, 29, 1, 0.534);
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+}
+.tovtobuyleft{
+    display: flex;
+    flex-wrap: wrap;
+}
