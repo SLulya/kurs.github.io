@@ -48,8 +48,8 @@ function drawprods(){
 }
 drawprods();
 
-let gottotalprice = localStorage.getItem("totalprice");
-if(gottotalprice == null){
+let gototalprice = localStorage.getItem("totalprice");
+if(gototalprice == null){
      document.getElementById('numberofbooks').innerHTML  = 
     `<h2 class="text" >Всього: 0 </h2>`;
 }
