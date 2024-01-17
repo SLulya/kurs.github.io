@@ -221,7 +221,7 @@ function sam(){
 function cancel(){
         let buynow = document.getElementById('modal');
         buynow.style.display = "none";
-    localStorage.removeItem("sumawithdel);
+    localStorage.removeItem('sumawithdel');
       location.reload();
 }
 
