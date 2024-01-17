@@ -221,6 +221,7 @@ function sam(){
 function cancel(){
         let buynow = document.getElementById('modal');
         buynow.style.display = "none";
+      window.location.reload();
 }
 
 function saveorder(){
