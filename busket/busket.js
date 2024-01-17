@@ -147,8 +147,9 @@ function amountminus(tovar_id){
     
 let prods = getprods();
 
-
+if(prods[tovar_id].count >= 1){
     prods[tovar_id].count--;
+}
     localStorage.setItem('prod', JSON.stringify(prods));
     drawprods();
 
