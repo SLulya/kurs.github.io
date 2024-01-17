@@ -96,11 +96,7 @@ let cartidx;
     localStorage.setItem('checkedarr', JSON.stringify(prodscheck))
     drawprods()
 }
-    let gottotalprice = localStorage.getItem("totalprice");
-    if(gottotalprice == null){
-         document.getElementById('numberofbooks').innerHTML  = 
-        `<h2 class="text" >Всього: 0 </h2>`;
-    }else{
+    
 sum = 0;
 prodscheck.forEach(prod =>{
     sum += Number(prod.price*prod.count);
@@ -109,7 +105,7 @@ prodscheck.forEach(prod =>{
         let suma = localStorage.getItem('totalprice');
         document.getElementById('numberofbooks').innerHTML  = 
         `<h2 class="text" >Всього: ${suma} </h2>`;
-    }
+    
 localStorage.setItem('checkedarr', JSON.stringify(prodscheck));
 
 
