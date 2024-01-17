@@ -254,8 +254,8 @@ db.collection("All_orders").add(perbook).then(function(){
     
 });
 
-displayMessage('message-madeorder', 'Вітаємо, очікуйте замовлення!', '', 4000);
-
+displayMessage('message-madeorder', 'Вітаємо, очікуйте замовлення!', '', 2000);
+cancel();
 }
 function return_allproducts(){
     localStorage.removeItem('buynow');
