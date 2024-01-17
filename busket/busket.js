@@ -48,11 +48,7 @@ function drawprods(){
 }
 drawprods();
 
-let gototalprice = localStorage.getItem("totalprice");
-if(gototalprice == null){
-     document.getElementById('numberofbooks').innerHTML  = 
-    `<h2 class="text" >Всього: 0 </h2>`;
-}
+
 
 function ifchecked(){
     let prod =  JSON.parse(localStorage.getItem('checkedarr'));
@@ -113,8 +109,13 @@ prodscheck.forEach(prod =>{
         })
         localStorage.setItem("totalprice", JSON.stringify(sum));
         let suma = localStorage.getItem('totalprice');
+        if(suma != null){ 
         document.getElementById('numberofbooks').innerHTML  = 
         `<h2 class="text" >Всього: ${suma} </h2>`;
+        }else{
+            document.getElementById('numberofbooks').innerHTML  = 
+    `<h2 class="text" >Всього: 0 </h2>`;
+        }
 }
 localStorage.setItem('checkedarr', JSON.stringify(prodscheck));
 
@@ -133,9 +134,14 @@ localStorage.setItem('checkedarr', JSON.stringify(prodscheck));
 }
 }
 let suma = localStorage.getItem('totalprice');
+        if(suma != null){
         document.getElementById('numberofbooks').innerHTML  = 
         `<h2 class="text" >Всього: ${suma} </h2>`;
         document.getElementById('totalprice').innerHTML = `${suma} ₴`;
+}else{
+    document.getElementById('numberofbooks').innerHTML  = 
+    `<h2 class="text" >Всього: 0 </h2>`;
+}
 
 function amountplus(tovar_id){
     
