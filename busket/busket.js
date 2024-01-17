@@ -187,10 +187,12 @@ function order(){
         `
     });
 
+    let totsumm = localStorage.getItem('totalprice');
+
+document.getElementById('totalprice').innerHTML = `${totsumm}&nbsp;₴`
 }
 let totsum = Number(localStorage.getItem('totalprice'));
 
-document.getElementById('totalprice').innerHTML = `${totsum}&nbsp;₴`
 function novaposhta(){
     let totprice=totsum
     totprice += totsum*10/100;
