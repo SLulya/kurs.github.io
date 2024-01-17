@@ -66,6 +66,10 @@ function ifchecked(){
                  return prod; 
              }
 }
+if(ifchecked() == []){
+    let zero = 0;
+    localStorage.setItem("totalprice", JSON.stringify(zero));
+}
 let sum;
 function savelocalcheck(idd){
    let prods = getprods();
