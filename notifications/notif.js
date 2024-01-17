@@ -21,7 +21,7 @@ function displayMessage(type, title, message, time){
     content.appendChild(text);
 
     text.addEventListener("click", function(){
-        window.location.href = "../busket/busket.html"
+        window.location.href = "https://slulya.github.io/kurs.github.io/busket/busket.html"
     })
 
     let line = document.createElement('div');
