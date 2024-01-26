@@ -39,6 +39,7 @@ function drawprods(){
             <span class="checkmark"></span>
         </label>
         
+        <div class="delfrombusket btn btn-success" onclick="delfrombusket(${index})"><i class="fa-solid fa-xmark xtodel" style="color: #ffffff;"></i></div>
 
         </div>
     </div>`;
@@ -165,6 +166,41 @@ if(prods[tovar_id].count > 1){
     localStorage.setItem('prod', JSON.stringify(prods));
     drawprods();
 
+}
+
+function delfrombusket(tov_index){
+    let prods = getprods();
+    let checked = ifchecked();
+    
+    let totsum = Number(localStorage.getItem('totalprice'));
+    console.log(prods[tov_index].price)
+    let totsuma = totsum - prods[tov_index].price;
+    console.log(prods[tov_index].price)
+    localStorage.setItem('totalprice', JSON.stringify(totsuma));
+
+    prods.splice(tov_index, 1);
+    checked.splice(tov_index, 1);
+    localStorage.setItem('prod', JSON.stringify(prods));
+    localStorage.setItem('checkedarr', JSON.stringify(checked));
+
+    let suma = Number(localStorage.getItem('totalprice'));
+    document.getElementById('numberofbooks').innerHTML  = 
+        `<h2 class="text" >Всього: ${suma} </h2>`;
+        document.getElementById('totalprice').innerHTML = `${suma} ₴`;
+    console.log('deleted');
+    drawprods();
+}
+
+
+function checkorder(){
+    let checkedtovs = JSON.parse(localStorage.getItem('checkedarr'));
+
+    if(checkedtovs.length != 0){
+       order();
+
+    }else{
+         displayMessage('message-madeorder', 'Виберіть товари для замовлення', '', 2000);
+    }
 }
 
 function order(){
