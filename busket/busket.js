@@ -175,9 +175,9 @@ function delfrombusket(tov_index){
     let totsum = Number(localStorage.getItem('totalprice'));
     console.log(prods[tov_index].price);
     if(totsum != 0){
-    let totsuma = totsum - prods[tov_index].price;}
+    let totsuma = totsum - prods[tov_index].price;
     console.log(prods[tov_index].price)
-    localStorage.setItem('totalprice', JSON.stringify(totsuma));
+    localStorage.setItem('totalprice', JSON.stringify(totsuma));}
 
     prods.splice(tov_index, 1);
     checked.splice(tov_index, 1);
