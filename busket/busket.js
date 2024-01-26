@@ -173,8 +173,9 @@ function delfrombusket(tov_index){
     let checked = ifchecked();
     
     let totsum = Number(localStorage.getItem('totalprice'));
-    console.log(prods[tov_index].price)
-    let totsuma = totsum - prods[tov_index].price;
+    console.log(prods[tov_index].price);
+    if(totsum != 0){
+    let totsuma = totsum - prods[tov_index].price;}
     console.log(prods[tov_index].price)
     localStorage.setItem('totalprice', JSON.stringify(totsuma));
 
@@ -184,6 +185,7 @@ function delfrombusket(tov_index){
     localStorage.setItem('checkedarr', JSON.stringify(checked));
 
     let suma = Number(localStorage.getItem('totalprice'));
+    
     document.getElementById('numberofbooks').innerHTML  = 
         `<h2 class="text" >Всього: ${suma} </h2>`;
         document.getElementById('totalprice').innerHTML = `${suma} ₴`;
